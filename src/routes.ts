@@ -10,6 +10,9 @@ import { createProductSchema, deleteProductSchema, getProductSchema, updateProdu
 import { createProductHandler, deleteProductHandler, getProductHandler, updateProductHandler } from './controller/Product.controller'
 
 function routes(app: Express) {
+    app.get('/', (req: Request, res: Response) => {
+        return res.sendFile(__dirname + '/index.html' )
+    })
     app.get('/health', (req: Request, res: Response) => {
         return res.sendStatus(200)
     })

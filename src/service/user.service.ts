@@ -7,7 +7,7 @@ import config from "config"
 import axios from 'axios'
 import qs from "qs";
 
-export async function createUser(input: DocumentDefinition<Omit<UserDocument, 'createdAt' | 'updatedAt' | 'comparePassword'>>){
+export async function createUser(input: DocumentDefinition<Omit<UserDocument, 'createdAt' | 'updatedAt' | 'comparePassword' | 'picture'>>){
     try {
         const user = await UserModel.create(input)
 

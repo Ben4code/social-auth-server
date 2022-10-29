@@ -2,7 +2,6 @@ import { DocumentDefinition, FilterQuery, QueryOptions, UpdateQuery } from "mong
 import ProductModel, { ProductDocument } from "../models/product.model";
 
 export async function createProduct(input: DocumentDefinition<Omit<ProductDocument, 'createdAt' | 'updatedAt'>>) {
-    console.log('first')
     return ProductModel.create(input)
 }
 
